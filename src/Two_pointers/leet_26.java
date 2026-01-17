@@ -1,7 +1,5 @@
 package Two_pointers;
 
-import Arrays_Hashing.leet_643;
-
 public class leet_26 {
      public int removeDuplicates(int [] nums){
         if (nums == null) return 0;
