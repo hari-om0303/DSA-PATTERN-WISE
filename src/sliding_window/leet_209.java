@@ -19,7 +19,7 @@ public class leet_209 {
 
     public static void main(String[] args) {
         leet_209 obj = new leet_209();
-        int [] nums = {1,4,4};
+        int [] nums = {1,4,4,12};
         System.out.println(obj.sizeofsubarray(nums, 4));
     }
 }
