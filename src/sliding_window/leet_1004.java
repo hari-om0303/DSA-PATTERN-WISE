@@ -24,7 +24,7 @@ public class leet_1004 {
 
     public static void main(String[] args) {
         leet_1004 o = new leet_1004();
-        int [] num = {1,1,1,0,0,0,1,1,1,1,0};
+        int [] num = {1,1,1,0,0,0,1,1,1,1,0,1,1};
         System.out.println(o.longestOnes(num , 2));
     }
 }
