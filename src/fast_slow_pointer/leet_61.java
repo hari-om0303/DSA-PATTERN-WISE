@@ -1,28 +1,28 @@
 package fast_slow_pointer;
 
 public class leet_61 {
-    class ListNode {
+    class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        public ListNode(int val) {
+        public Node(int val) {
             this.val = val;
         }
 
-        public ListNode(int val, ListNode next) {
+        public Node(int val, Node next) {
             this.val = val;
             this.next = next;
         }
     }
 
-    public ListNode rotateRight(ListNode head, int k) {
+    public Node rotateRight(Node head, int k) {
 
         if (head == null || head.next == null) return head;
         int n = length(head);
         k = k % n; // to reduce k
         if (k == 0) return head;
 
-        ListNode tail = head;
+        Node tail = head;
 //        find tail
         while (tail.next != null) {
             tail = tail.next;
@@ -31,19 +31,19 @@ public class leet_61 {
 //        to make list circular
         tail.next = head;
 
-        ListNode newtail = head;
+        Node newtail = head;
         for (int i = 1; i < n - k; i++) {
             newtail = newtail.next;
         }
 
-        ListNode newhead = newtail.next;
+        Node newhead = newtail.next;
 //        break circle
       newtail.next = null;
         return newhead;
     }
 
-    public static int length(ListNode head) {
-        ListNode node = head;
+    public static int length(Node head) {
+        Node node = head;
         int length = 0;
         while (node != null) {
             length++;
