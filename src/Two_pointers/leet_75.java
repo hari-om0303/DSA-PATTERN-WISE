@@ -30,6 +30,29 @@ public class leet_75 {
  return newarr;
     }
 
+//    interview acceptable
+    public void sortColor(int [] nums){
+        int low = 0;
+        int mid = 0;
+        int high = nums.length-1;
+        while (mid<=high){
+            if (nums[mid] == 0 ){
+                int temp = nums[mid];
+                nums[mid] = nums[low];
+                nums[low] = temp;
+                mid++;
+                low++;
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else if (nums[mid] == 2) {
+                int temp = nums[mid];
+                nums[mid] = nums[high];
+                nums[high] = temp;
+                high--;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int [] num = {2,0,2,1,1,0,0};
         int [] ans = sortColors(num);
