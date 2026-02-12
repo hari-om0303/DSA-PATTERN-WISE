@@ -1,4 +1,5 @@
 package Stack;
+import java.util.Stack;
 
 public class leet_2487 {
 
